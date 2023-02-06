@@ -5,7 +5,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.Timer;
-import javax.swing.border.Border;
 
 /**
  *
@@ -18,8 +17,7 @@ public class Login extends javax.swing.JFrame {
 
     public Login() {
         initComponents();
-     
-       
+        setLocationRelativeTo(null);
 
     }
 
@@ -67,16 +65,14 @@ public class Login extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jCheckBox1 = new javax.swing.JCheckBox();
-        jLabel6 = new javax.swing.JLabel();
+        jLOlvidoContra = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        jLRegistarte = new javax.swing.JLabel();
         jLLogin = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLSlider1 = new javax.swing.JLabel();
@@ -89,25 +85,15 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Login");
 
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Esto es un texto de prueba !! hola ------------------------------------------------------------------");
-
-        jButton1.setText("REGISTRATE");
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setText("Registrate");
+        jLabel2.setForeground(new java.awt.Color(173, 167, 167));
+        jLabel2.setText("See your growth and get consulting support!");
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("User");
 
         jTextField1.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField1.setForeground(new java.awt.Color(173, 167, 167));
         jTextField1.setText("CoderTech@mail.com");
         jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -115,6 +101,7 @@ public class Login extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Password");
 
+        jTextField2.setForeground(new java.awt.Color(173, 167, 167));
         jTextField2.setText("Min 8 characters");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,16 +109,40 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        jCheckBox1.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox1.setForeground(new java.awt.Color(0, 0, 0));
         jCheckBox1.setText("Remenber Me");
 
-        jLabel6.setForeground(new java.awt.Color(80, 56, 236));
-        jLabel6.setText("Olvidaste tu contraseña ?");
+        jLOlvidoContra.setForeground(new java.awt.Color(80, 56, 236));
+        jLOlvidoContra.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/olvidoContraExcited.png"));
+        jLOlvidoContra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLOlvidoContraMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLOlvidoContraMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLOlvidoContraMouseExited(evt);
+            }
+        });
 
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("No tienes un cuenta?");
 
-        jLabel8.setForeground(new java.awt.Color(80, 56, 236));
-        jLabel8.setText("Registrate");
+        jLRegistarte.setForeground(new java.awt.Color(80, 56, 236));
+        jLRegistarte.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/registrarteExcited.png"));
+        jLRegistarte.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLRegistarteMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLRegistarteMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLRegistarteMouseExited(evt);
+            }
+        });
 
         jLLogin.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/loginExcited.png"));
         jLLogin.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -150,18 +161,12 @@ public class Login extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(270, 270, 270)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(124, 124, 124)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(77, 77, 77)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel7)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel8))
+                                .addComponent(jLRegistarte))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel4)
                                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -173,7 +178,7 @@ public class Login extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(jCheckBox1)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel6)))))
+                                    .addComponent(jLOlvidoContra)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(118, 118, 118)
                         .addComponent(jLLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -182,15 +187,11 @@ public class Login extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(123, 123, 123)
+                .addGap(219, 219, 219)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addGap(24, 24, 24)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
-                .addGap(44, 44, 44)
+                .addGap(49, 49, 49)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -201,14 +202,14 @@ public class Login extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBox1)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLOlvidoContra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(20, 20, 20)
                 .addComponent(jLLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(80, Short.MAX_VALUE))
+                    .addComponent(jLRegistarte))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
 
         jLSlider1.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/1.jpg"));
@@ -242,7 +243,7 @@ public class Login extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0))
         );
@@ -256,10 +257,6 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
@@ -272,20 +269,42 @@ public class Login extends javax.swing.JFrame {
         jLLogin.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/loginExcited.png"));
     }//GEN-LAST:event_jLLoginMouseExited
 
+    private void jLOlvidoContraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLOlvidoContraMouseEntered
+        jLOlvidoContra.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/olvidoContraEntered.png"));
+    }//GEN-LAST:event_jLOlvidoContraMouseEntered
+
+    private void jLOlvidoContraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLOlvidoContraMouseExited
+        jLOlvidoContra.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/olvidoContraExcited.png"));
+    }//GEN-LAST:event_jLOlvidoContraMouseExited
+
+    private void jLOlvidoContraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLOlvidoContraMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLOlvidoContraMouseClicked
+
+    private void jLRegistarteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLRegistarteMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLRegistarteMouseClicked
+
+    private void jLRegistarteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLRegistarteMouseEntered
+        jLRegistarte.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/registrarteEntered.png"));
+    }//GEN-LAST:event_jLRegistarteMouseEntered
+
+    private void jLRegistarteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLRegistarteMouseExited
+        jLRegistarte.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/registrarteExcited.png"));
+    }//GEN-LAST:event_jLRegistarteMouseExited
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLLogin;
+    private javax.swing.JLabel jLOlvidoContra;
+    private javax.swing.JLabel jLRegistarte;
     public javax.swing.JLabel jLSlider1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     public javax.swing.JTextField jTextField1;
