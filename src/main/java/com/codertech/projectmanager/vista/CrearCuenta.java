@@ -4,29 +4,20 @@
  */
 package com.codertech.projectmanager.vista;
 
-import java.awt.BorderLayout;
 import javax.swing.ImageIcon;
 
 /**
  *
- * @author CoderTech
+ * @author anton
  */
-public class Login extends javax.swing.JPanel {
+public class CrearCuenta extends javax.swing.JPanel {
 
-    CrearCuenta crearCuenta = new CrearCuenta();
-    FrmLogin frmLogin = new FrmLogin();
-    
-    public Login() {
+    /**
+     * Creates new form Login
+     */
+    public CrearCuenta() {
         initComponents();
     }
-    
-     /*public void crearCuenta() {
-        crearCuenta.setSize(599, 740);
-        frmLogin.Contenedor1.removeAll();
-        frmLogin.Contenedor1.add(crearCuenta, BorderLayout.CENTER);
-        frmLogin.Contenedor1.revalidate();
-        frmLogin.Contenedor1.repaint();
-    }*/
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -44,24 +35,26 @@ public class Login extends javax.swing.JPanel {
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
         jLabel7 = new javax.swing.JLabel();
-        jLRegistrate = new javax.swing.JLabel();
-        jLLogin = new javax.swing.JLabel();
+        jLRegistrar = new javax.swing.JLabel();
         jLOlvidoContra = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Login");
+        jLabel1.setText("          Create Account");
 
         jLabel2.setForeground(new java.awt.Color(173, 167, 167));
         jLabel2.setText("See your growth and get consulting support!");
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("User *");
+        jLabel4.setText("Email *");
 
         jTextField1.setBackground(new java.awt.Color(255, 255, 255));
         jTextField1.setForeground(new java.awt.Color(173, 167, 167));
@@ -85,39 +78,25 @@ public class Login extends javax.swing.JPanel {
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("Password *");
-
-        jCheckBox1.setBackground(new java.awt.Color(255, 255, 255));
-        jCheckBox1.setForeground(new java.awt.Color(0, 0, 0));
-        jCheckBox1.setText("Remenber Me");
+        jLabel5.setText("User *");
 
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("No tienes un cuenta?");
 
-        jLRegistrate.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/registrarteExcited.png"));
-        jLRegistrate.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLRegistrar.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/registerExcitedButton.png"));
+        jLRegistrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLRegistrateMouseClicked(evt);
+                jLRegistrarMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLRegistrateMouseEntered(evt);
+                jLRegistrarMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLRegistrateMouseExited(evt);
+                jLRegistrarMouseExited(evt);
             }
         });
 
-        jLLogin.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/loginExcited.png"));
-        jLLogin.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLLoginMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLLoginMouseExited(evt);
-            }
-        });
-
-        jLOlvidoContra.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/olvidoContraEntered.png"));
+        jLOlvidoContra.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/olvidoContraExcited.png"));
         jLOlvidoContra.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLOlvidoContraMouseClicked(evt);
@@ -130,10 +109,42 @@ public class Login extends javax.swing.JPanel {
             }
         });
 
+        jTextField3.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField3.setForeground(new java.awt.Color(173, 167, 167));
+        jTextField3.setText(" Coder Tech");
+        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Full Name *");
+
+        jTextField4.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField4.setForeground(new java.awt.Color(173, 167, 167));
+        jTextField4.setText(" Min 8 characters ");
+        jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText("Password *");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(115, 115, 115)
+                .addComponent(jLRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(70, 70, 70)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,48 +155,50 @@ public class Login extends javax.swing.JPanel {
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
                         .addGap(74, 74, 74))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jCheckBox1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLRegistrate))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel7)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jLOlvidoContra))
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel5)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel4)))
-                        .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(125, 125, 125))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLOlvidoContra))
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4)
+                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(0, 0, 0)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(218, 218, 218)
+                .addGap(67, 67, 67)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel2)
-                .addGap(43, 43, 43)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jLRegistrate, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(43, 43, 43)
-                .addComponent(jLLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63)
+                .addComponent(jLRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(jLOlvidoContra))
@@ -212,25 +225,13 @@ public class Login extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jLLoginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLLoginMouseEntered
-        jLLogin.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/loginEntered.png"));
-    }//GEN-LAST:event_jLLoginMouseEntered
+    private void jLRegistrarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLRegistrarMouseEntered
+        jLRegistrar.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/registerEnteredButton.png"));
+    }//GEN-LAST:event_jLRegistrarMouseEntered
 
-    private void jLLoginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLLoginMouseExited
-        jLLogin.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/loginExcited.png"));
-    }//GEN-LAST:event_jLLoginMouseExited
-
-    private void jLRegistrateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLRegistrateMouseClicked
-        
-    }//GEN-LAST:event_jLRegistrateMouseClicked
-
-    private void jLRegistrateMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLRegistrateMouseEntered
-        jLRegistrate.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/registrarteEntered.png"));
-    }//GEN-LAST:event_jLRegistrateMouseEntered
-
-    private void jLRegistrateMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLRegistrateMouseExited
-        jLRegistrate.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/registrarteExcited.png"));
-    }//GEN-LAST:event_jLRegistrateMouseExited
+    private void jLRegistrarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLRegistrarMouseExited
+        jLRegistrar.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/registerExcitedButton.png"));
+    }//GEN-LAST:event_jLRegistrarMouseExited
 
     private void jLOlvidoContraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLOlvidoContraMouseClicked
         // TODO add your handling code here:
@@ -244,19 +245,33 @@ public class Login extends javax.swing.JPanel {
         jLOlvidoContra.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/olvidoContraExcited.png"));
     }//GEN-LAST:event_jLOlvidoContraMouseExited
 
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void jLRegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLRegistrarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLRegistrarMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JLabel jLLogin;
-    public javax.swing.JLabel jLOlvidoContra;
-    public javax.swing.JLabel jLRegistrate;
+    private javax.swing.JLabel jLOlvidoContra;
+    private javax.swing.JLabel jLRegistrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JTextField jTextField1;
     public javax.swing.JTextField jTextField2;
+    public javax.swing.JTextField jTextField3;
+    public javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }
