@@ -6,6 +6,7 @@ com\codertech\projectmanager\vista\Login$5.class
 com\codertech\projectmanager\vista\SliderLogin.class
 com\codertech\projectmanager\controlador\CLogin$1.class
 com\codertech\projectmanager\vista\SliderLogin$1.class
+com\codertech\projectmanager\controlador\CLogin$2.class
 com\codertech\projectmanager\vista\CrearCuenta$7.class
 com\codertech\projectmanager\vista\Login$1.class
 com\codertech\projectmanager\vista\CrearCuenta$3.class

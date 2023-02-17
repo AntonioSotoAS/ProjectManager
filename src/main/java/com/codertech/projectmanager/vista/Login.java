@@ -117,7 +117,7 @@ public class Login extends javax.swing.JPanel {
             }
         });
 
-        jLOlvidoContra.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/olvidoContraEntered.png"));
+        jLOlvidoContra.setIcon(new ImageIcon("src/main/java/com/codertech/projectmanager/img/olvidoContraExcited.png"));
         jLOlvidoContra.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLOlvidoContraMouseClicked(evt);
